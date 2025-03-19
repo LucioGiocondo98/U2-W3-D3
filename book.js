@@ -41,7 +41,7 @@ const getRemoteBooks = function(){
         newTitle.innerText = title
         cardBody.appendChild(newTitle)
         const newPrice = document.createElement('p')
-        newPrice.classList.add('card-text', 'text-center','fs-italic','mb-4')
+        newPrice.classList.add('card-text','fs-italic','mb-4')
         newPrice.innerText = price + '$'
         cardBody.appendChild(newPrice)
          

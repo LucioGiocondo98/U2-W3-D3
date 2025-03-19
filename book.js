@@ -51,7 +51,7 @@ const getRemoteBooks = function(){
         cardBody.appendChild(remove)
         const removeBook = function(){
         remove.addEventListener('click',function(){
-            card.classList.add('d-none')
+            forCard.classList.add('d-none')
         })
         } 
         removeBook()

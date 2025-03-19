@@ -19,28 +19,30 @@ const getRemoteBooks = function(){
         const cardContainer = document.getElementById('forBook');
 
         //Creo card
+        const forCard= document.createElement('div')
+        forCard.classList.add('col',);
         const card = document.createElement('div');
-        card.classList.add('col-3', 'border','border-2', 'border-dark','me-2','position-relative');
+        card.classList.add('card', 'border','border-2', 'border-dark','position-relative','h-100');
+        forCard.append(card)
         
         //Immagine
         const newImg=document.createElement('img')
-        console.log('IMG?',img)
-        newImg.classList.add('card-img-top')
+        newImg.classList.add('card-img-top','h-auto')
         newImg.src = img
         card.appendChild(newImg)
 
 
         const cardBody = document.createElement('div');
-        cardBody.classList.add('card-body',);
+        cardBody.classList.add('card-body','d-flex','flex-wrap','justify-content-end');
     
         //Prezzo e titolo
         const newTitle = document.createElement('h5')
-        newTitle.classList.add('card-title')
+        newTitle.classList.add('card-title','flex-grow-1')
         newTitle.innerText = title
         cardBody.appendChild(newTitle)
         const newPrice = document.createElement('p')
-        newPrice.classList.add('card-text')
-        newPrice.innerText = price
+        newPrice.classList.add('card-text', 'text-center','fs-italic','mb-4')
+        newPrice.innerText = price + '$'
         cardBody.appendChild(newPrice)
          
         const remove = document.createElement('button')
@@ -54,7 +56,7 @@ const getRemoteBooks = function(){
         } 
         removeBook()
         card.appendChild(cardBody);
-        cardContainer.appendChild(card);
+        cardContainer.appendChild(forCard);
         
     });
 })
